@@ -26,7 +26,15 @@ and $t9,$t7,$t2 	# $t9 = A * !B * !C
 and $t7,$t7,$t5 	# $t7 = A * !B * C
 or $t9,$t7,$t9 		# $t9 = (A * !B * C) + ($t9 = A * !B * !C)
 
+or $t9,$t9,$t8		# $t9 = (A * !B * C) + (A * !B * !C) + (!A * B * !C) + (!A * B * C)
 
+li $v0, 4
+la $a0, str1
+syscall
 
+li $v0, 1
+move $a0, $t9
+syscall
 
- 
+li $v0, 10
+syscall
