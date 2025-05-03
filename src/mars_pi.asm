@@ -21,3 +21,12 @@ and $t6,$t6,$t2 	# $t6 	= !A * B * C
 
 or $t8,$t6,$t8 		# $t8 = (!A *B * !C) + (!A *B * C)
 
+and $t7,$t0,$t4 	# $t7 = A * !B
+and $t9,$t7,$t2 	# $t9 = A * !B * !C
+and $t7,$t7,$t5 	# $t7 = A * !B * C
+or $t9,$t7,$t9 		# $t9 = (A * !B * C) + ($t9 = A * !B * !C)
+
+
+
+
+ 
