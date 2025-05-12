@@ -1,8 +1,8 @@
 .data
 # Definição dos rótulos
-a: .word 0
-b: .word 0
-c: .word 0
+a: .word 1
+b: .word 1
+c: .word 1
 str1: .asciiz "Resultado final: "
 
 .text 
